@@ -70,9 +70,30 @@ public class Main {
 
     public static void Third() {
         Raaandom randomObject = new Raaandom();
-        randomObject.InputFromConsole();
-        randomObject.MassiveAB();
-        // randomObject.bubbleSort();
+
+        double[] A = randomObject.GetMassiv();
+
+        double[] B = randomObject.GetMassiv();
+
+        System.out.println("Massive A:");
+        randomObject.PrintMassiv(A);
+
+        System.out.println("Massive B:");
+        randomObject.PrintMassiv(B);
+
+        randomObject.bubbleSort(A);
+
+        randomObject.bubbleSort(B);
+
+        System.out.println("Sorted A:");
+        randomObject.PrintMassiv(A);
+
+        System.out.println("Sorted B:");
+        randomObject.PrintMassiv(B);
+        double[] C = randomObject.Combine(A, B);
+        System.out.println("Combined massive:");
+        randomObject.PrintMassiv(C);
+
     }
 
 }
